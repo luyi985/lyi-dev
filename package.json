@@ -8,7 +8,8 @@
     "server:dev": "nodemon --watch app --exec node app/index.js",
     "server": "node app/index.js",
     "test": "jest",
-    "build": "babel app -d public"
+    "build": "babel app -d public",
+    "build:webpack": "webpack --mode development"
   },
   "repository": {
     "type": "git",
