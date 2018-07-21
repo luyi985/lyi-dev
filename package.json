@@ -4,12 +4,13 @@
   "description": "",
   "main": "app/index.js",
   "scripts": {
+    "clean": "rm -rf public",
     "start": "node app/index.js",
     "server:dev": "nodemon --watch app --exec node app/index.js",
-    "server": "node app/index.js",
+    "server": "node src/server/index.js",
     "test": "jest",
     "build": "babel app -d public",
-    "build:webpack": "webpack --mode development"
+    "build:webpack": "npm run clean && webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -24,16 +25,29 @@
   "homepage": "https://github.com/luyi985/lyi-server#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "foundation-sites": "^6.5.0-rc.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "superagent": "^3.8.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "^23.4.1",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
     "nodemon": "^1.18.3",
     "regenerator-runtime": "^0.12.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
