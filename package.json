@@ -9,6 +9,7 @@
     "server": "node src/server/index.js",
     "server:dev": "nodemon --watch src/server --exec npm run server",
     "test": "jest",
+    "build": "npm run clean && webpack --mode production",
     "build:webpack": "npm run clean && webpack --mode development",
     "lint": "eslint src/**/**/*.js",
     "fmt:js": "prettier --config js.prettierrc --write src/**/**/*.{js,jsx}",
