@@ -5,7 +5,6 @@
   "main": "app/index.js",
   "scripts": {
     "clean": "rm -rf public",
-    "start": "node app/index.js",
     "server": "node src/server/index.js",
     "server:dev": "nodemon --watch src/server --exec npm run server",
     "test": "jest",
@@ -15,6 +14,7 @@
     "fmt:js": "prettier --config js.prettierrc --write src/**/**/*.{js,jsx}",
     "fmt:style": "prettier --config style.prettierrc --write src/**/**/*.scss",
     "fmt": "npm run fmt:js && npm run fmt:style",
+    "start": "npm run build:webpack && npm run server",
     "precommit": "lint-staged",
     "prepush": "npm run fmt && npm test"
   },
