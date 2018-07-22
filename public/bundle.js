@@ -346,7 +346,7 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"../../node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _style = __webpack_require__(/*! ../style/style.scss */ \"./style/style.scss\");\n\nvar _style2 = _interopRequireDefault(_style);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n  return _react2.default.createElement(\n    \"div\",\n    null,\n    _react2.default.createElement(\n      \"p\",\n      null,\n      \"React here!\"\n    )\n  );\n};\nexports.default = App;\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById(\"app\"));\n\n//# sourceURL=webpack:///./app/app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"../../node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"../../node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\n__webpack_require__(/*! ../style/style.scss */ \"./style/style.scss\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar App = function App() {\n    return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(\n            'p',\n            null,\n            'React here!'\n        )\n    );\n};\n\nexports.default = App;\n\n_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));\n\n//# sourceURL=webpack:///./app/app.js?");
 
 /***/ }),
 
@@ -358,7 +358,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _app = __webpack_require__(/*! ./app/app */ \"./app/app.js\");\n\nvar _app2 = _interopRequireDefault(_app);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n//# sourceURL=webpack:///./index.js?");
+eval("\n\n__webpack_require__(/*! ./app/app */ \"./app/app.js\");\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -367,9 +367,9 @@ eval("\n\nvar _app = __webpack_require__(/*! ./app/app */ \"./app/app.js\");\n\n
   !*** ./style/style.scss ***!
   \**************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./style/style.scss?");
+eval("throw new Error(\"Module build failed (from /Users/yilu/git/lyi-server/node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from /Users/yilu/git/lyi-server/node_modules/sass-loader/lib/loader.js):\\nError: Missing binding /Users/yilu/git/lyi-server/node_modules/node-sass/vendor/darwin-x64-51/binding.node\\nNode Sass could not find a binding for your current environment: OS X 64-bit with Node.js 7.x\\n\\nFound bindings for the following environments:\\n  - OS X 64-bit with Node.js 8.x\\n\\nThis usually happens because your environment has changed since running `npm install`.\\nRun `npm rebuild node-sass` to download the binding for your current environment.\\n    at module.exports (/Users/yilu/git/lyi-server/node_modules/node-sass/lib/binding.js:15:13)\\n    at Object.<anonymous> (/Users/yilu/git/lyi-server/node_modules/node-sass/lib/index.js:14:35)\\n    at Module._compile (/Users/yilu/git/lyi-server/node_modules/v8-compile-cache/v8-compile-cache.js:178:30)\\n    at Object.Module._extensions..js (module.js:582:10)\\n    at Module.load (module.js:490:32)\\n    at tryModuleLoad (module.js:449:12)\\n    at Function.Module._load (module.js:441:3)\\n    at Module.require (module.js:500:17)\\n    at require (/Users/yilu/git/lyi-server/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)\\n    at Object.sassLoader (/Users/yilu/git/lyi-server/node_modules/sass-loader/lib/loader.js:24:22)\\n    at runLoaders (/Users/yilu/git/lyi-server/node_modules/webpack/lib/NormalModule.js:284:20)\\n    at /Users/yilu/git/lyi-server/node_modules/loader-runner/lib/LoaderRunner.js:364:11\\n    at /Users/yilu/git/lyi-server/node_modules/loader-runner/lib/LoaderRunner.js:230:18\\n    at runSyncOrAsync (/Users/yilu/git/lyi-server/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\\n    at iterateNormalLoaders (/Users/yilu/git/lyi-server/node_modules/loader-runner/lib/LoaderRunner.js:229:2)\\n    at Array.<anonymous> (/Users/yilu/git/lyi-server/node_modules/loader-runner/lib/LoaderRunner.js:202:4)\\n    at Storage.finished (/Users/yilu/git/lyi-server/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:43:16)\\n    at provider (/Users/yilu/git/lyi-server/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:79:9)\\n    at /Users/yilu/git/lyi-server/node_modules/graceful-fs/graceful-fs.js:78:16\\n    at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:415:3)\");\n\n//# sourceURL=webpack:///./style/style.scss?");
 
 /***/ }),
 

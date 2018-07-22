@@ -9,13 +9,13 @@
     "server": "node src/server/index.js",
     "server:dev": "nodemon --watch src/server --exec npm run server",
     "test": "jest",
-    "build": "babel app -d public",
     "build:webpack": "npm run clean && webpack --mode development",
-    "precommit": "npm test",
     "lint": "eslint src/**/**/*.js",
     "fmt:js": "prettier --config js.prettierrc --write src/**/**/*.{js,jsx}",
     "fmt:style": "prettier --config style.prettierrc --write src/**/**/*.scss",
-    "fmt": "npm run fmt:js && npm run fmt:style"
+    "fmt": "npm run fmt:js && npm run fmt:style",
+    "precommit": "lint-staged",
+    "prepush": "npm run fmt && npm test"
   },
   "repository": {
     "type": "git",
@@ -54,6 +54,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
     "jest": "^23.4.1",
+    "lint-staged": "^7.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
     "nodemon": "^1.18.3",
@@ -71,5 +72,9 @@
     "transform": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileTransformer.js"
     }
+  },
+  "lint-staged": {
+    "src/**/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
+    "src/**/**/*.{scss,css}": "prettier --config style.prettierrc --write"
   }
 }
