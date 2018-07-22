@@ -1,12 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import style from "../style/style.scss";
-const App = () => {
-  return (
+import React from 'react';
+import ReactDOM from 'react-dom';
+import '../style/style.scss';
+const App = () => (
     <div>
-      <p>React here!</p>
+        <p>React here!</p>
     </div>
-  );
-};
+);
+
 export default App;
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
