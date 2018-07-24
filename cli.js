@@ -6,7 +6,7 @@ const currentPath = __dirname;
 const srcPath = path.join(__dirname, '../lyi-server');
 const targetPath = process.cwd()
 
-const fileToCopy = ['.babelrc', '.eslintrc.js', 'js.prettierrc', 'style.prettierrc', 'webpack.config.js', 'fileTransformer.js', 'src', '__test__']
+const fileToCopy = ['.babelrc', '.eslintrc.js', 'js.prettierrc', 'style.prettierrc', 'webpack.config.js', 'fileTransformer.js'];
 
 function copyFiles() {
     fileToCopy.forEach(file => {
@@ -49,3 +49,5 @@ function npmInit(callBack) {
 copyFiles();
 npmInit(updatePackageJson)
 exec('npm i');
+exec(`cp -rv ${srcPath}/src ${targetPath}/src`);
+exec(`cp -rv ${srcPath}/__test__ ${targetPath}/__test__`);
