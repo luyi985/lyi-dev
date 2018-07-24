@@ -10,9 +10,9 @@
     "test": "jest",
     "build": "npm run clean && webpack --mode production",
     "build:webpack": "npm run clean && webpack --mode development",
-    "lint": "eslint src/**/**/*.js",
-    "fmt:js": "prettier --config js.prettierrc --write src/**/**/*.{js,jsx}",
-    "fmt:style": "prettier --config style.prettierrc --write src/**/**/*.scss",
+    "lint": "eslint src/**/**/*.js src/**/*.js",
+    "fmt:js": "prettier --config js.prettierrc --write src/**/*.{js,jsx} src/**/**/*.{js,jsx}",
+    "fmt:style": "prettier --config style.prettierrc --write src/**/*.scss src/**/**/*.scss",
     "fmt": "npm run fmt:js && npm run fmt:style",
     "start": "npm run build:webpack && npm run server",
     "precommit": "lint-staged",
@@ -30,8 +30,10 @@
   },
   "homepage": "https://github.com/luyi985/lyi-server#readme",
   "dependencies": {
+    "apollo-server-express": "^2.0.0",
     "express": "^4.16.3",
     "foundation-sites": "^6.5.0-rc.2",
+    "graphql": "^0.13.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "superagent": "^3.8.3"
@@ -43,6 +45,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "cors": "^2.8.4",
     "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
@@ -76,6 +79,8 @@
   },
   "lint-staged": {
     "src/**/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
-    "src/**/**/*.{scss,css}": "prettier --config style.prettierrc --write"
+    "src/**/**/*.{scss,css}": "prettier --config style.prettierrc --write",
+    "src/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
+    "src/**/*.{scss,css}": "prettier --config style.prettierrc --write"
   }
 }

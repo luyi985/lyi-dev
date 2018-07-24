@@ -6,6 +6,5 @@ const App = () => (
         <p>React here!</p>
     </div>
 );
-
 export default App;
 ReactDOM.render(<App />, document.getElementById('app'));
