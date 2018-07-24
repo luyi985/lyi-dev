@@ -1,6 +1,6 @@
 {
   "name": "lyi-server",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "app/index.js",
   "scripts": {
@@ -15,8 +15,10 @@
     "fmt:style": "prettier --config style.prettierrc --write src/**/*.scss src/**/**/*.scss",
     "fmt": "npm run fmt:js && npm run fmt:style",
     "start": "npm run build:webpack && npm run server",
+    "release": "npm version",
     "precommit": "lint-staged",
-    "prepush": "npm run fmt && npm test"
+    "prepush": "npm run fmt && npm test",
+    "postrelease": "npm publish && git push origin HEAD --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -69,7 +71,9 @@
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
-  "bin": { "lyi-server" : "./cli.js" },
+  "bin": {
+    "lyi-server": "./cli.js"
+  },
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
