@@ -2,8 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const { exec } = require('child_process')
-const currentPath = __dirname;
-const srcPath = path.join(__dirname, '../lyi-server');
+const srcPath = path.join(__dirname, '../lyi-dev');
 const targetPath = process.cwd()
 
 const fileToCopy = ['.babelrc', '.eslintrc.js', 'js.prettierrc', 'style.prettierrc', 'webpack.config.js', 'fileTransformer.js'];
@@ -15,6 +14,7 @@ function copyFiles() {
 }
 
 function updatePackageJson(error, stdout, stderr) {
+    
     try {
         const srcJson = require(`${srcPath}/package.json`);
         const targetJson = require(`${targetPath}/package.json`);
@@ -48,6 +48,8 @@ function npmInit(callBack) {
 
 copyFiles();
 npmInit(updatePackageJson)
-exec('npm i');
 exec(`cp -rv ${srcPath}/src ${targetPath}/src`);
 exec(`cp -rv ${srcPath}/__test__ ${targetPath}/__test__`);
+console.log('-----Project has been setted up-------')
+console.log('Installing Package...')
+exec('npm i');

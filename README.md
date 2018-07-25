@@ -1,4 +1,4 @@
-# lyi-server
+# lyi-dev
 
 ## Useful resource
  - https://www.valentinog.com/blog/webpack-tutorial/

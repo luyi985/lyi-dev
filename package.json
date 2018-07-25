@@ -1,8 +1,8 @@
 {
-  "name": "lyi-server",
+  "name": "lyi-dev",
   "version": "1.0.0",
   "description": "",
-  "main": "app/index.js",
+  "main": "src/server/index.js",
   "scripts": {
     "clean": "rm -rf public",
     "server": "node src/server/index.js",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luyi985/lyi-server.git"
+    "url": "git+https://github.com/luyi985/lyi-dev.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luyi985/lyi-server/issues"
+    "url": "https://github.com/luyi985/lyi-dev/issues"
   },
-  "homepage": "https://github.com/luyi985/lyi-server#readme",
+  "homepage": "https://github.com/luyi985/lyi-dev#readme",
   "dependencies": {
     "apollo-server-express": "^2.0.0",
     "express": "^4.16.3",
@@ -72,7 +72,7 @@
     "webpack-cli": "^3.0.8"
   },
   "bin": {
-    "lyi-server": "./cli.js"
+    "lyi-dev": "./cli.js"
   },
   "jest": {
     "moduleNameMapper": {
