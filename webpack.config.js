@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const config = (env, argv) => {
     return {
         mode: argv.mode,
-        context: path.resolve(__dirname, 'src/client'),
+        context: path.resolve(__dirname, 'client'),
         entry: ['./index.js'],
         output: {
             path: path.resolve(__dirname, "public"),

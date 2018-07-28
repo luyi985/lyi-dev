@@ -48,7 +48,8 @@ function npmInit(callBack) {
 
 copyFiles();
 npmInit(updatePackageJson)
-exec(`cp -rv ${srcPath}/src ${targetPath}/src`);
+exec(`cp -rv ${srcPath}/client ${targetPath}/client`);
+exec(`cp -rv ${srcPath}/server ${targetPath}/server`);
 exec(`cp -rv ${srcPath}/__test__ ${targetPath}/__test__`);
 console.log('-----Project has been setted up-------')
 console.log('Installing Package...')
