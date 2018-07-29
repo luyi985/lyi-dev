@@ -11,7 +11,7 @@
     "build": "npm run clean && webpack --mode production",
     "build:webpack": "npm run clean && webpack --mode development",
     "lint": "eslint client/**/*.js server/**/*.js",
-    "fmt:js": "prettier --config js.prettierrc --write client/**/*.{js,jsx} server/**/*.{js,jsx}",
+    "fmt:js": "prettier --config js.prettierrc --write client/**/*.{js,jsx} server/**/*.{js,jsx} bin/**/*.{js,jsx}",
     "fmt:style": "prettier --config style.prettierrc --write client/**/*.scss client/**/**/*.scss",
     "fmt": "npm run fmt:js && npm run fmt:style",
     "start": "npm run build:webpack && npm run server",
@@ -88,6 +88,7 @@
     "client/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
     "client/**/**/*.{scss,css}": "prettier --config style.prettierrc --write",
     "server/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
+    "bin/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
     "client/**/*.{scss,css}": "prettier --config style.prettierrc --write"
   }
 }
