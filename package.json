@@ -11,13 +11,11 @@
     "build": "npm run clean && webpack --mode production",
     "build:webpack": "npm run clean && webpack --mode development",
     "lint": "eslint client/**/*.js server/**/*.js",
-    "fmt:js": "prettier --config js.prettierrc --write client/**/*.{js,jsx} server/**/*.{js,jsx} bin/**/*.{js,jsx}",
-    "fmt:style": "prettier --config style.prettierrc --write client/**/*.scss client/**/**/*.scss",
-    "fmt": "npm run fmt:js && npm run fmt:style",
+    "fmt": "prettier --config .prettierrc --write client/**/*.{js,jsx,scss} server/**/*.{js,jsx} bin/**/*.{js,jsx}",
     "start": "npm run build:webpack && npm run server",
     "release": "npm version",
     "precommit": "lint-staged",
-    "prepush": "npm run fmt && npm test",
+    "prepush": "npm run fmt && git add --all && npm test",
     "postrelease": "npm publish && git push origin HEAD --follow-tags"
   },
   "repository": {
@@ -85,10 +83,6 @@
     }
   },
   "lint-staged": {
-    "client/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
-    "client/**/**/*.{scss,css}": "prettier --config style.prettierrc --write",
-    "server/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
-    "bin/**/*.{js,jsx}": "prettier --config js.prettierrc --write",
-    "client/**/*.{scss,css}": "prettier --config style.prettierrc --write"
+    "{client,bin,server}/{**/*,**/**/*,*}.{js,jsx,scss}": ["prettier --config .prettierrc --write", "git add --all"]
   }
 }
