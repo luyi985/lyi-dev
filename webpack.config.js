@@ -13,6 +13,10 @@ const config = (env, argv) => {
             filename: "bundle.js",
             publicPath: '/'
         },
+        watchOptions: {
+            aggregateTimeout: 300, // The default
+            ignored: ['__test__', 'node_modules']
+        },
         module: {
             rules: [
                 {
