@@ -19,8 +19,10 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
+
 server.applyMiddleware({ app });
 
+app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/test', (req, res) => {
